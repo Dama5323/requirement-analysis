@@ -88,3 +88,33 @@ Non-functional requirements define how the system performs its functions - the q
 
 
 ---
+
+## Acceptance Criteria
+
+Acceptance Criteria are conditions that a software product must satisfy to be accepted by stakeholders. They define the boundaries of a user story and provide clear, testable conditions for completion.
+
+### Importance of Acceptance Criteria
+- Provide clear definition of done for development teams
+- Enable accurate test case creation
+- Reduce ambiguity in requirements
+- Facilitate stakeholder sign-off
+- Ensure delivered features meet business needs
+
+### Example: Checkout Feature Acceptance Criteria
+
+**Feature:** As a registered user, I want to complete the booking checkout process so that I can confirm my reservation.
+
+**Acceptance Criteria:**
+1. **Given** the user has selected a room and dates, **when** they proceed to checkout, **then** the system shall display a summary of the booking details including room type, dates, total price, and taxes.
+
+2. **Given** the user is at the checkout page, **when** they are not logged in, **then** the system shall prompt them to login or continue as guest.
+
+3. **Given** the user is providing payment information, **when** they enter invalid credit card details, **then** the system shall display appropriate error messages and prevent form submission.
+
+4. **Given** all required information is valid, **when** the user submits the payment, **then** the system shall process the payment through the secure payment gateway.
+
+5. **Given** the payment is successful, **when** the booking is confirmed, **then** the system shall send a confirmation email to the user with booking details and reference number.
+
+6. **Given** the payment fails, **when** the user retries payment, **then** the system shall allow up to 3 payment attempts before locking the booking for 15 minutes.
+
+7. **Given** the checkout process is completed successfully, **then** the system shall update room availability and create a booking record in the database.
